@@ -538,3 +538,32 @@ label {
 		margin-left: -5%;
 	}
 }
+
+/* Collapsible container for experience and other long content */
+.collapsible {
+    position: relative;
+    padding-bottom: 0.2em;
+  }
+  .collapsible:not(.open) > * {
+    display: none;
+  }
+  .collapsible:not(.open) > p:first-child {
+    display: block;
+  }
+
+  .collapsible > .toggler {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+  .collapsible > .toggler::after {
+    content: "\25bc";
+  }
+  .collapsible.open > .toggler::after {
+    content: "\25b2";
+  }
